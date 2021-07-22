@@ -24,6 +24,7 @@ mv /opt/nexus-3.0.2-02 /opt/nexus
 As a good security practice, it is not advised to run nexus service as root. so create new user called nexus and grant sudo access to manage nexus services 
 ```sh 
 sudo adduser nexus
+sudo passwd nexus
 # visudo \\ nexus   ALL=(ALL)       NOPASSWD: ALL
 sudo chown -R nexus:nexus /opt/nexus
 ```
