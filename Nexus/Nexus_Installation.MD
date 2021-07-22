@@ -10,6 +10,7 @@ Nexus is one a artifact repository which helps to store your build outcomes.
 # sudo yum install -y java-1.8.0-openjdk 
 # sudo java -version
 ```
+2. Adjust security group to allow traffice to port 8081/tcp which is the default port for nexus
 
 ### Implementation steps 
 
@@ -19,6 +20,8 @@ cd /opt
 wget https://sonatype-download.global.ssl.fastly.net/nexus/3/nexus-3.0.2-02-unix.tar.gz
 tar -zxvf  nexus-3.0.2-02-unix.tar.gz
 mv /opt/nexus-3.0.2-02 /opt/nexus
+
+#for latest version you can download it from https://download.sonatype.com/nexus/3/latest-unix.tar.gz
 ```
 
 As a good security practice, it is not advised to run nexus service as root. so create new user called nexus and grant sudo access to manage nexus services 
@@ -53,6 +56,8 @@ Use default credentials to login
 
 username : admin  
 password : admin123
+
+latest version on nexus shall have a default username : admin and default password in that directory cat /opt/sonatype-work/nexus3/admin.password
 
 
 ### Troubleshooting
