@@ -41,6 +41,7 @@ run_as_user="nexus" (file shold have only this line)
 Add nexus as a service at boot time
 ```sh
 sudo ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
+#Run as a service help : https://help.sonatype.com/repomanager3/installation/run-as-a-service
 ```
 Login as a nexus user and start service
 ```sh
